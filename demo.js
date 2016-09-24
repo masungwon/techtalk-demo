@@ -1,4 +1,4 @@
-// launch with: 'node load-balancer.js 8001 (or 8002 or 8003)' on terminal
+// launch with: 'node demo.js 8001 (or 8002 or 8003)' on terminal
 var http = require('http');
 let PORT = process.argv.splice(2)[0];
 
