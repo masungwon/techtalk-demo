@@ -8,6 +8,7 @@ let PORT = process.argv.splice(2)[0];
 //Create a basic server that responds to any request with 'Hello World'
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/plain'});
+    console.log('SERVER: Instance at ' + PORT + ' received request\n');
     res.end('Hello World\n');
 }).listen(PORT, function () {
     console.log('Server running at http://localhost:' + PORT + '/');

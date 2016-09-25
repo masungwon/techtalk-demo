@@ -28,7 +28,7 @@ http.createServer(function (req, res) {
     let target = { target: addresses.shift() };
 
     // proxy to the server whose 'turn' it is
-    console.log('balancing request to: ', target);
+    console.log('PROXY: balancing request to: ', target);
     proxy.web(req, res, target);
 
     // and then the server you just used becomes the last item on the list
