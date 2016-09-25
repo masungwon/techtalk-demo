@@ -4,6 +4,7 @@
 */
 let PORT = process.argv.splice(2)[0];  // 8000
 let httpProxy = require('http-proxy');
+const http = require('http');
 
 // List of servers we want to use in the rotation
 let addresses = [
@@ -20,8 +21,9 @@ let addresses = [
         port: 8003
     }
 ];
+const proxy = httpProxy.createServer();
 
-httpProxy.createServer(function (req, res, proxy) {
+http.createServer(function (req, res) {
     // on each request, get the first location from the addresse list
     let target = { target: addresses.shift() };
 
