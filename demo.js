@@ -1,4 +1,7 @@
-// launch with: 'node demo.js 8001 (or 8002 or 8003)' on terminal
+/*
+* This is where we launch servers that will work with the load balancer
+* Launch with: 'node demo.js 8001 (or 8002 or 8003) &' on terminal
+*/
 var http = require('http');
 let PORT = process.argv.splice(2)[0];
 
